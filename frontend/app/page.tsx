@@ -1,60 +1,36 @@
 "use client";
 
-import Link from "next/link";
+import CardComponent from "@/component/card";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <>
-      <div>name</div>
-      <div>this is border</div>
+      {/* header layout */}
+      <div className="flex justify-center text-3xl p-2">OneClick</div>
+      {/* header layout */}
 
+      <hr />
+
+      {/* card layout */}
       <div>
-        <div>headline</div>
-
+        <div className="flex justify-center p-2">Services</div>
         {/* Card Section */}
-        <div style={{ display: "flex", gap: "20px" }}>
-          {/* YouTube Card */}
-          <Link href="/Youtube">
-            <div
-              style={{
-                padding: "20px",
-                border: "1px solid black",
-                cursor: "pointer",
-              }}
-            >
-              YouTube
-            </div>
-          </Link>
-
-          {/* TikTok Card */}
-          <Link href="/Tiktok">
-            <div
-              style={{
-                padding: "20px",
-                border: "1px solid black",
-                cursor: "pointer",
-              }}
-            >
-              TikTok
-            </div>
-          </Link>
-
-          {/* X Card */}
-          <Link href="/X">
-            <div
-              style={{
-                padding: "20px",
-                border: "1px solid black",
-                cursor: "pointer",
-              }}
-            >
-              X
-            </div>
-          </Link>
+        <div className="flex justify-center gap-3 pb-5">
+          <CardComponent title="Youtube" route="/Youtube" />
+          <CardComponent title="X" route="/X" />
+          <CardComponent title="Tiktok" route="/Tiktok" />
         </div>
       </div>
+      {/* card layout */}
 
-      <div>about the website</div>
+      <hr />
+
+      {/* footer layout */}
+      <div className="flex justify-center p-2">about the website</div>
+      {/* footer layout */}
+
     </>
   );
 }
