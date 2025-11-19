@@ -10,13 +10,21 @@ export default function CardComponent(props: any) {
   }
 
   return (
-    <>
-      <Card
-        className="active:scale-95 active:blur-sm transition cursor-pointer"
-        onClick={onclickhandler}
-      >
-        {props.title}
-      </Card>
-    </>
+    <Card
+      className="
+        w-80 h-80 
+        flex items-center justify-center 
+        text-2xl font-semibold text-bold
+        active:scale-95 active:blur-sm 
+        hover:scale-105 hover:shadow-2xl hover:shadow-white/20
+        transition-all 
+        cursor-pointer
+        bg-red backdrop-blur-sm
+        borderborder-green/20
+      "
+      onClick={onclickhandler}
+    >
+      {props.title}
+    </Card>
   );
 }

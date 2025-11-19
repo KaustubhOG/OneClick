@@ -15,20 +15,31 @@ export default function Home() {
       {/* FOREGROUND CONTENT (above background) */}
       <div className="relative z-10 backdrop-blur-md bg-black/30 min-h-screen text-white">
         {/* Header */}
+        <div className="flex justify-center text-purple-700 text-8xl tracking-widest py-8">
+          <BlurText />
+        </div>-
 
-        <BlurText />
         <hr className="border-white/20" />
 
         {/* Services Section */}
-        <div>
-          <div className="flex justify-center text-xl p-4 font-medium">
+        <div className="py-12">
+          <div className="flex justify-center text-2xl p-4 font-medium">
             Services
           </div>
 
-          <div className="flex justify-center gap-5 pb-10">
-            <CardComponent title="Youtube" route="/Youtube" />
-            <CardComponent title="X" route="/X" />
-            <CardComponent title="Tiktok" route="/Tiktok" />
+          <div className="flex justify-center gap-8 pb-10 px-4">
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-row gap-4">
+                <CardComponent title="Youtube" route="/Youtube" />
+                <CardComponent title="X" route="/X" />
+                <CardComponent title="Tiktok" route="/Tiktok" />
+              </div>
+              <div className="flex flex-row gap-4">
+                <CardComponent title="Youtube" route="/Youtube" />
+                <CardComponent title="X" route="/X" />
+                <CardComponent title="Tiktok" route="/Tiktok" />
+              </div>
+            </div>
           </div>
         </div>
 
